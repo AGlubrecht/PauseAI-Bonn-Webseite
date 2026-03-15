@@ -35,8 +35,9 @@ body {
 /* Container */
 .container {
   max-width: var(--container-max);
-  margin: 0 auto;
+  margin: 0;
   padding: 0 var(--spacing-md);
+  padding-left: calc(42px + 2 * 0.625rem);
   width: 100%;
 }
 
@@ -97,6 +98,7 @@ img {
 @media (max-width: 768px) {
   .container {
     padding: 0 var(--spacing-sm);
+    padding-left: var(--spacing-sm);
   }
 
   .section {

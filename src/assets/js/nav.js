@@ -37,3 +37,54 @@
 
   observer.observe(hero);
 })();
+
+// Events section: click to activate scrolling, click outside or Escape to deactivate
+(function () {
+  var scrollWrapper = document.querySelector('.section--events .events-scroll');
+  if (!scrollWrapper) return;
+
+  // Position inner scroll to first upcoming event on load (without scrolling the page)
+  var firstUpcoming = scrollWrapper.querySelector('.event-card:not(.event-card--past)');
+  if (firstUpcoming) {
+    requestAnimationFrame(function () {
+      scrollWrapper.style.overflowY = 'auto';
+      scrollWrapper.scrollTop = firstUpcoming.offsetTop - scrollWrapper.offsetTop - 16;
+      scrollWrapper.style.overflowY = '';
+    });
+  }
+
+  var shadowWrap = document.querySelector('.section--events .events-shadow-wrap');
+  var eventsSection = document.querySelector('.section--events');
+  var active = false;
+
+  function activate() {
+    active = true;
+    scrollWrapper.classList.add('events-scroll--active');
+    if (shadowWrap) shadowWrap.classList.add('events-shadow-wrap--active');
+    if (eventsSection) eventsSection.classList.add('section--events--active');
+  }
+
+  function deactivate() {
+    active = false;
+    scrollWrapper.classList.remove('events-scroll--active');
+    if (shadowWrap) shadowWrap.classList.remove('events-shadow-wrap--active');
+    if (eventsSection) eventsSection.classList.remove('section--events--active');
+  }
+
+  // First click activates, second click (anywhere) deactivates
+  scrollWrapper.addEventListener('click', function (e) {
+    if (!active) {
+      activate();
+      e.stopPropagation();
+    }
+  });
+
+  document.addEventListener('click', function () {
+    if (active) deactivate();
+  });
+
+  // Escape → deactivate
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && active) deactivate();
+  });
+})();

@@ -30,15 +30,19 @@ layout: layouts/base.njk
 </section>
 
 {# ===== EVENTS ===== #}
-<section class="section" id="events">
+<section class="section section--events" id="events">
   <div class="container">
     <h2 class="section__title">{{ events.seriesTitle }}</h2>
     <p class="section__subtitle">{{ events.seriesDescription }}</p>
-    <div class="events-list">
-      {% set foundNext = false %}
-      {% for event in events.events %}
-        {{ eventCard(event, events.time, events.location) }}
-      {% endfor %}
+    <div class="events-shadow-wrap">
+      <div class="events-scroll">
+        <div class="events-list">
+          {% set foundNext = false %}
+          {% for event in events.events %}
+            {{ eventCard(event, events.time, events.location) }}
+          {% endfor %}
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -81,6 +85,15 @@ layout: layouts/base.njk
           <div>
             <div class="contact-item__label">Discord</div>
             <div class="contact-item__value">PauseAI Deutschland Server</div>
+          </div>
+        </a>
+      {% endif %}
+      {% if site.contact.discordInternational %}
+        <a href="{{ site.contact.discordInternational }}" class="contact-item" target="_blank" rel="noopener">
+          <span class="contact-item__icon">&#127760;</span>
+          <div>
+            <div class="contact-item__label">Discord (International)</div>
+            <div class="contact-item__value">PauseAI Global Server</div>
           </div>
         </a>
       {% endif %}
