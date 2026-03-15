@@ -33,11 +33,18 @@
             <span>{{ site.title }}</span>
           </a>
 
-          <button class="nav__toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Navigation öffnen">&#9776;</button>
+          <button class="nav__toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Navigation öffnen"><span class="nav__toggle-middle"></span></button>
+        </div>
 
-          <ul class="nav__menu" id="main-nav">
+        <div class="nav__menu" id="main-nav">
+          <ul class="nav__menu-internal">
             {% for item in site.nav %}
               <li><a href="{{ item.href }}" class="nav__link"{% if item.external %} target="_blank" rel="noopener"{% endif %}>{{ item.label }}</a></li>
+            {% endfor %}
+          </ul>
+          <ul class="nav__menu-external">
+            {% for org in site.parentOrgs %}
+              <li><a href="{{ org.url }}" class="nav__link nav__link--external" target="_blank" rel="noopener">{{ org.label }}</a></li>
             {% endfor %}
           </ul>
         </div>

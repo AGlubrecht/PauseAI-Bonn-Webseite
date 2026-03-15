@@ -2,20 +2,23 @@
 (function () {
   var toggle = document.querySelector('.nav__toggle');
   var menu = document.querySelector('.nav__menu');
+  var nav = document.querySelector('.nav');
   if (!toggle || !menu) return;
 
   toggle.addEventListener('click', function () {
     var isOpen = menu.classList.toggle('nav__menu--open');
+    toggle.classList.toggle('nav__toggle--open', isOpen);
+    if (nav) nav.classList.toggle('nav--menu-open', isOpen);
     toggle.setAttribute('aria-expanded', isOpen);
-    toggle.innerHTML = isOpen ? '&#10005;' : '&#9776;';
   });
 
   // Close menu when a link is clicked
   menu.querySelectorAll('.nav__link').forEach(function (link) {
     link.addEventListener('click', function () {
       menu.classList.remove('nav__menu--open');
+      toggle.classList.remove('nav__toggle--open');
+      if (nav) nav.classList.remove('nav--menu-open');
       toggle.setAttribute('aria-expanded', 'false');
-      toggle.innerHTML = '&#9776;';
     });
   });
 })();
