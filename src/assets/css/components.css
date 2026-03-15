@@ -459,6 +459,8 @@
 
 @media (max-width: 768px) {
   .hero {
+    min-height: 100vh;
+    min-height: 100svh;
     padding-top: calc(42px + 2 * var(--spacing-sm));
     padding-bottom: var(--spacing-lg);
   }
@@ -484,6 +486,12 @@
 
   .hero__links {
     width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (min-height: 836px) {
+  .hero {
+    min-height: 50vh;
   }
 }
 
