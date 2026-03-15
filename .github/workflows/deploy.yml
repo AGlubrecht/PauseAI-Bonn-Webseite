@@ -27,9 +27,7 @@ jobs:
 
       - run: npm ci
 
-      - run: npm run build
-        env:
-          ELEVENTY_PATH_PREFIX: /PauseAI-Bonn-Webseite/
+      - run: npx eleventy --pathprefix=/PauseAI-Bonn-Webseite/
 
       - uses: actions/upload-pages-artifact@v3
         with:
