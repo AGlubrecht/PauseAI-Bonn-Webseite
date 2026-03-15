@@ -25,21 +25,17 @@ for (const viewport of VIEWPORTS) {
     });
 
     test('no horizontal page overflow', async ({ page }) => {
-      // Scroll to the right and check if the page actually scrolls
-      const overflow = await page.evaluate(() => {
-        window.scrollTo(10000, 0);
-        const after = window.scrollX;
-        window.scrollTo(0, 0);
+      const result = await page.evaluate(() => {
+        const docEl = document.documentElement;
         return {
-          canScrollHorizontally: after > 0,
-          scrolledTo: after,
-          docWidth: document.documentElement.clientWidth,
+          scrollWidth: docEl.scrollWidth,
+          clientWidth: docEl.clientWidth,
         };
       });
       expect(
-        overflow.canScrollHorizontally,
-        `Page can scroll horizontally (scrolled to ${overflow.scrolledTo}px, viewport=${overflow.docWidth}px)`
-      ).toBe(false);
+        result.scrollWidth,
+        `Page overflows horizontally (scrollWidth=${result.scrollWidth}px > clientWidth=${result.clientWidth}px)`
+      ).toBeLessThanOrEqual(result.clientWidth);
     });
 
     test('no text elements overflow their containers', async ({ page }) => {

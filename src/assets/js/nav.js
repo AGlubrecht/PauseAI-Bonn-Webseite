@@ -91,3 +91,28 @@
     if (e.key === 'Escape' && active) deactivate();
   });
 })();
+
+// Hide navbar on scroll-down, show on scroll-up (mobile only)
+(function () {
+  var nav = document.querySelector('.nav');
+  if (!nav) return;
+
+  var lastScrollY = window.scrollY;
+  var threshold = 5;
+
+  window.addEventListener('scroll', function () {
+    if (window.innerWidth > 768) {
+      nav.classList.remove('nav--hidden');
+      return;
+    }
+    if (nav.classList.contains('nav--menu-open')) return;
+
+    var currentY = window.scrollY;
+    if (currentY - lastScrollY > threshold) {
+      nav.classList.add('nav--hidden');
+    } else if (lastScrollY - currentY > threshold) {
+      nav.classList.remove('nav--hidden');
+    }
+    lastScrollY = currentY;
+  }, { passive: true });
+})();
