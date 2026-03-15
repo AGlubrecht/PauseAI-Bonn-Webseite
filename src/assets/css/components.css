@@ -11,11 +11,10 @@
   left: 0;
   right: 0;
   z-index: 100;
-  background-color: #ffffff00;
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(6px);
   height: var(--nav-height);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid #1a1a1a23;
 }
 
 .nav__inner {
@@ -190,7 +189,7 @@
 
 /* Dark-background variant (toggled by JS when over hero) */
 .nav--on-dark {
-  border-bottom-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: #1a1a1a23;
 }
 
 .nav--on-dark .nav__brand {
@@ -281,7 +280,7 @@
     text-align: left;
     color: var(--color-text) !important;
     background: #fff;
-    border: 1px solid #000;
+    border: 1px solid #0000001f;
   }
 
   .nav__menu-external li:first-child .nav__link {
@@ -307,9 +306,13 @@
   text-align: left;
 }
 
+.hero .container {
+  container-type: inline-size;
+}
+
 .hero__title {
   font-family: var(--font-heading);
-  font-size: var(--font-size-hero);
+  font-size: clamp(1.75rem, 11cqi, var(--font-size-hero));
   font-weight: var(--font-weight-heading);
   line-height: var(--line-height-heading);
   margin-bottom: var(--spacing-md);
