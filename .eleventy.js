@@ -1,4 +1,6 @@
 module.exports = function(eleventyConfig) {
+  const pathPrefix = process.env.ELEVENTY_PATH_PREFIX || "/";
+
   eleventyConfig.addPassthroughCopy("src/assets/css");
   eleventyConfig.addPassthroughCopy("src/assets/images");
   eleventyConfig.addPassthroughCopy("src/assets/js");
@@ -8,6 +10,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addWatchTarget("src/assets/js/");
 
   return {
+    pathPrefix,
     dir: {
       input: "src",
       output: "_site",

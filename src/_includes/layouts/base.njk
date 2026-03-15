@@ -10,15 +10,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="/assets/css/theme.css">
-  <link rel="stylesheet" href="/assets/css/layout.css">
-  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="{{ '/assets/css/theme.css' | url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/layout.css' | url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/components.css' | url }}">
 
-  <link rel="icon" href="/assets/images/favicon.ico" sizes="48x48">
-  <link rel="icon" href="/assets/images/bonn_logo.svg" type="image/svg+xml">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="icon" href="{{ '/assets/images/favicon.ico' | url }}" sizes="48x48">
+  <link rel="icon" href="{{ '/assets/images/bonn_logo.svg' | url }}" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32x32.png' | url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon-16x16.png' | url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | url }}">
 </head>
 <body>
   <div class="site">
@@ -27,7 +27,7 @@
     <header>
       <nav class="nav" role="navigation" aria-label="Hauptnavigation">
         <div class="nav__inner">
-          <a href="/" class="nav__brand">
+          <a href="{{ '/' | url }}" class="nav__brand">
             <div class="logo" role="img" aria-label="PauseAI Bonn Logo">
               <div class="logo__band"></div>
               <div class="logo__plaque"></div>
@@ -65,14 +65,14 @@
       <div class="container footer__inner">
         <span>&copy; <script>document.write(new Date().getFullYear())</script> {{ site.title }}</span>
         <div class="footer__links">
-          <a href="/impressum/" class="footer__link">Impressum</a>
-          <a href="/datenschutz/" class="footer__link">Datenschutz</a>
+          <a href="{{ '/impressum/' | url }}" class="footer__link">Impressum</a>
+          <a href="{{ '/datenschutz/' | url }}" class="footer__link">Datenschutz</a>
         </div>
       </div>
     </footer>
 
   </div>
 
-  <script src="/assets/js/nav.js"></script>
+  <script src="{{ '/assets/js/nav.js' | url }}"></script>
 </body>
 </html>
