@@ -5,16 +5,47 @@ layout: layouts/base.njk
 {% from "components/event-card.njk" import eventCard %}
 
 {# ===== HERO ===== #}
+{% set nextEvent = null %}
+{% for event in events.events %}
+  {% if not nextEvent and event.status == "upcoming" %}
+    {% set nextEvent = event %}
+  {% endif %}
+{% endfor %}
+
 <section class="hero" id="hero">
-  <div class="container">
-    <h1 class="hero__title">{{ sections.hero.title }}</h1>
-    <div class="hero__links">
-      {% for link in sections.hero.links %}
-        <a href="{{ link.href }}" class="hero-link">
-          <span>{{ link.label }}</span>
-          <span class="hero-link__arrow">&darr;</span>
-        </a>
-      {% endfor %}
+  <div class="container hero__inner">
+    {% if nextEvent %}
+    <div class="hero-event">
+      <div class="hero-event__top">
+        <span class="hero-event__live">
+          <span class="hero-event__dot"></span>
+          Nächstes Event
+        </span>
+        <span class="hero-event__countdown" data-event-date="{{ nextEvent.date }}" data-event-time="18:00">
+          --:--:--:--
+        </span>
+      </div>
+      <div class="hero-event__meta">
+        {{ nextEvent.date | deDate }} · {{ events.time }}<br>
+        {{ events.location }}
+      </div>
+      <div class="hero-event__title">{{ nextEvent.title }}</div>
+      {% if nextEvent.subtitle %}
+        <div class="hero-event__subtitle">{{ nextEvent.subtitle }}</div>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    <div class="hero__bottom">
+      <h1 class="hero__title">{{ sections.hero.title }}</h1>
+      <div class="hero__links">
+        {% for link in sections.hero.links %}
+          <a href="{{ link.href }}" class="hero-link">
+            <span>{{ link.label }}</span>
+            <span class="hero-link__arrow">&darr;</span>
+          </a>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </section>
