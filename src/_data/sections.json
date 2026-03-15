@@ -9,7 +9,7 @@
   },
   "about": {
     "title": "Wer wir sind",
-    "text": "<p>PauseAI Bonn ist die Teil einer internationalen Bewegung, die sich dafür einsetzt die Entwicklung unkontrollierbarer KI-Systeme zu verhindern.</p><p>Die aktuelle Geschwindigkeit der KI-Entwicklung ist gefährlich. Ohne verbindliche internationale Abkommen riskieren wir den Verlust menschlicher Kontrolle über zunehmend mächtige Systeme.</p><p>Unsere Überzeugung: Nur wer die Technologie versteht, kann auch ihre Gefahren einschätzen. Deswegen veranstalten wir wöchentliche Vortragsabende, die sich mit Grundlagen und Risiken von künstlicher Intelligenz befassen.</p>",
+    "text": "<p>PauseAI Bonn ist Teil einer internationalen Bewegung, die sich dafür einsetzt die Entwicklung unkontrollierbarer KI-Systeme zu verhindern.</p><p>Die aktuelle Geschwindigkeit der KI-Entwicklung ist gefährlich. Ohne verbindliche internationale Abkommen riskieren wir den Verlust menschlicher Kontrolle über zunehmend mächtige Systeme.</p><p>Unsere Überzeugung: Nur wer die Technologie versteht, kann auch ihre Gefahren einschätzen. Deswegen veranstalten wir wöchentliche Vortragsabende, die sich mit Grundlagen und Risiken von künstlicher Intelligenz befassen.</p>",
     "learnMoreLabel": "Mehr erfahren",
     "learnMoreLinks": [
       { "label": "ki-risiken.de", "url": "https://ki-risiken.de" },

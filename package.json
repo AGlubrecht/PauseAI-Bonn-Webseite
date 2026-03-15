@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "test": "playwright test"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.2"
+    "@11ty/eleventy": "^3.1.2",
+    "@playwright/test": "^1.58.2"
   }
 }

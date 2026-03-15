@@ -3,3 +3,5 @@ node_modules/
 .DS_Store
 Reference/
 REFERENCE_INDEX.md
+test-results/
+playwright-report/

@@ -364,6 +364,14 @@
   padding-right: var(--spacing-md);
 }
 
+@media (max-width: 768px) {
+  .section--events .section__title,
+  .section--events .section__subtitle {
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
+  }
+}
+
 .section--events .events-shadow-wrap {
   flex: 1;
   position: relative;
