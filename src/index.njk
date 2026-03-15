@@ -72,7 +72,7 @@ layout: layouts/base.njk
     <div class="contact-list">
       {% if site.contact.email %}
         <a href="mailto:{{ site.contact.email }}" class="contact-item">
-          <span class="contact-item__icon">&#9993;</span>
+          <span class="contact-item__icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="16" width="48" height="32"/><polyline points="8,16 32,36 56,16"/></svg></span>
           <div>
             <div class="contact-item__label">E-Mail</div>
             <div class="contact-item__value">{{ site.contact.email }}</div>
@@ -81,7 +81,7 @@ layout: layouts/base.njk
       {% endif %}
       {% if site.contact.discord %}
         <a href="{{ site.contact.discord }}" class="contact-item" target="_blank" rel="noopener">
-          <span class="contact-item__icon">&#128172;</span>
+          <span class="contact-item__icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23.3,5 L30.1,6.8 L29.6,9 L30.8,10.1 L35.2,9.5 L34.1,12.6 L36.6,12.9 L41.2,8.9 L48.6,12.7 L46.8,13.2 L48.9,14.1 L49.6,17.4 L48.2,20.3 L50.5,22.1 L51.7,33.1 L49,32.7 L39.3,38.3 L41.8,44 L47,48.5 L42.2,53.1 L43.4,57.6 L40.1,55.7 L35.8,58.2 L32.1,56.8 L31,59 L26.1,55.2 L26.9,56.2 L24,55.2 L24.1,56.7 L20.1,57.1 L19.7,53.1 L22.5,47.2 L14.4,43.8 L15.1,41.4 L13.3,39.6 L14.6,37.7 L12.3,32.8 L13.8,30.5 L12.7,27.4 L16.1,26.8 L17.5,24.5 L15.8,22.3 L18.3,19.2 L17.2,16.7 L17.9,14.8 L21.6,14.3 L22.6,16.4 L24.2,13.1 L26.3,13.2 L25.1,12.1 L25.7,10.1 L24.1,10.1 L25.8,8.6 L24.1,6.1 L22.8,7 L23.3,5 Z"/></svg></span>
           <div>
             <div class="contact-item__label">Discord</div>
             <div class="contact-item__value">PauseAI Deutschland Server</div>
@@ -90,7 +90,7 @@ layout: layouts/base.njk
       {% endif %}
       {% if site.contact.discordInternational %}
         <a href="{{ site.contact.discordInternational }}" class="contact-item" target="_blank" rel="noopener">
-          <span class="contact-item__icon">&#127760;</span>
+          <span class="contact-item__icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="32" r="24"/><ellipse cx="32" cy="32" rx="10" ry="24"/><line x1="8" y1="32" x2="56" y2="32"/></svg></span>
           <div>
             <div class="contact-item__label">Discord (International)</div>
             <div class="contact-item__value">PauseAI Global Server</div>
