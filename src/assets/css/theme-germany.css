@@ -1,0 +1,64 @@
+/* ============================================
+   PauseAI Bonn — Theme: Germany (pause-ai.de)
+   Bold orange/black activist look.
+   ============================================ */
+
+:root {
+  /* Colors */
+  --color-primary: #FF9416;
+  --color-primary-hover: #e88510;
+  --color-secondary: #FF6B9D;
+  --color-secondary-hover: #e85a8a;
+
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f8f8;
+  --color-bg-dark: #0a0a0a;
+  --color-surface: #ffffff;
+  --color-border: #ddd;
+
+  --color-text: #0a0a0a;
+  --color-text-muted: #555;
+  --color-text-on-primary: #ffffff;
+  --color-text-on-dark: #ffffff;
+
+  /* Typography — Saira Condensed + Roboto Slab */
+  --font-heading: 'Saira Condensed', 'Inter', sans-serif;
+  --font-body: 'Roboto Slab', 'Inter', serif;
+  --font-weight-heading: 700;
+  --font-weight-body: 300;
+
+  --font-size-xs: 0.8rem;
+  --font-size-sm: 0.9rem;
+  --font-size-base: 1.05rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-hero: 3.5rem;
+
+  --line-height-body: 1.6;
+  --line-height-heading: 1.1;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-xxl: 4rem;
+
+  /* Layout */
+  --container-max: 900px;
+  --nav-height: 60px;
+
+  /* Borders & Shapes */
+  --radius: 4px;
+  --radius-lg: 8px;
+  --border: 2px solid var(--color-border);
+
+  /* Shadows */
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.15);
+
+  /* Transitions */
+  --transition: 0.25s ease;
+}

@@ -1,0 +1,37 @@
+{
+  "title": "Impressum",
+  "legalInfo": {
+    "title": "Angaben gemäß § 5 TMG",
+    "name": "Adrian Glubrecht",
+    "address": {
+      "street": "Wiesenweg 9a",
+      "postalCode": "51503",
+      "city": "Rösrath",
+      "country": "Deutschland"
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "email": "bonn@stopaigermany.de"
+  },
+  "responsibility": {
+    "title": "Redaktionell verantwortlich",
+    "name": "Adrian Glubrecht",
+    "address": {
+      "street": "Wiesenweg 9a",
+      "postalCode": "51503",
+      "city": "Rösrath"
+    }
+  },
+  "disclaimer": {
+    "title": "Haftungsausschluss",
+    "content": "Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte übernehmen wir jedoch keine Gewähr.",
+    "externalLinks": "Trotz sorgfältiger Kontrolle übernehmen wir keine Haftung für externe Links. Für deren Inhalt sind ausschließlich die Betreiber verantwortlich."
+  },
+  "copyright": {
+    "title": "Urheberrecht / Lizenzhinweise",
+    "content": "Sofern nicht anders angegeben, stehen die Inhalte dieser Website unter der Creative Commons-Lizenz BY-NC-SA 4.0.",
+    "licenseName": "Creative Commons BY-NC-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+  }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title or site.title }}</title>
+  <meta name="description" content="{{ description or site.description }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/theme.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+
+  <link rel="icon" href="/assets/images/bonn_logo.svg" type="image/svg+xml">
+</head>
+<body>
+  <div class="site">
+
+    {# ===== HEADER / NAV ===== #}
+    <header>
+      <nav class="nav" role="navigation" aria-label="Hauptnavigation">
+        <div class="nav__inner">
+          <a href="/" class="nav__brand">
+            <div class="logo" role="img" aria-label="PauseAI Bonn Logo">
+              <div class="logo__band"></div>
+              <div class="logo__plaque"></div>
+              <div class="logo__bar logo__bar--left"></div>
+              <div class="logo__bar logo__bar--right"></div>
+            </div>
+            <span>{{ site.title }}</span>
+          </a>
+
+          <button class="nav__toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Navigation öffnen">&#9776;</button>
+
+          <ul class="nav__menu" id="main-nav">
+            {% for item in site.nav %}
+              <li><a href="{{ item.href }}" class="nav__link"{% if item.external %} target="_blank" rel="noopener"{% endif %}>{{ item.label }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    {# ===== MAIN CONTENT ===== #}
+    <main>
+      {{ content | safe }}
+    </main>
+
+    {# ===== FOOTER ===== #}
+    <footer class="footer">
+      <div class="container footer__inner">
+        <span>&copy; <script>document.write(new Date().getFullYear())</script> {{ site.title }}</span>
+        <span class="footer__sep">&bull;</span>
+        <a href="/impressum/" class="footer__link">Impressum</a>
+        <span class="footer__sep">&bull;</span>
+        <a href="/datenschutz/" class="footer__link">Datenschutz</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="/assets/js/nav.js"></script>
+</body>
+</html>

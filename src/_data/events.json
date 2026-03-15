@@ -1,0 +1,62 @@
+{
+  "seriesTitle": "Veranstaltungen",
+  "seriesDescription": "Wöchentliche Vortragsabende zu KI-Risiken, Grundlagen und Regulierung. Offen für alle Interessierten.",
+  "time": "18 Uhr",
+  "location": "Adenauerallee 63 (Haupteingang)",
+  "events": [
+    {
+      "date": "2026-02-25",
+      "title": "Analogien und ihre Grenzen I",
+      "subtitle": "Neuronale Netze und das Gehirn",
+      "status": "past"
+    },
+    {
+      "date": "2026-03-04",
+      "title": "Blackmail, Täuschung, Kontrollumkehr",
+      "subtitle": "Wieso man eine KI nicht einfach abschalten kann",
+      "status": "past"
+    },
+    {
+      "date": "2026-03-11",
+      "title": "Analogien und ihre Grenzen II",
+      "subtitle": "Maschinelles Lernen und natürliche Selektion",
+      "status": "past"
+    },
+    {
+      "date": "2026-03-18",
+      "title": "Hyperscaling",
+      "subtitle": "Das Tempo und der Umfang des Wettrüstens um Rechenzentren",
+      "status": "upcoming"
+    },
+    {
+      "date": "2026-03-25",
+      "title": "TBA",
+      "subtitle": "",
+      "status": "tba"
+    },
+    {
+      "date": "2026-04-01",
+      "title": "Analogien und ihre Grenzen III",
+      "subtitle": "Machtstrebende KI-Systeme und Neorealismus",
+      "status": "upcoming"
+    },
+    {
+      "date": "2026-04-08",
+      "title": "Filmabend",
+      "subtitle": "Her",
+      "status": "upcoming"
+    },
+    {
+      "date": "2026-04-15",
+      "title": "Pragmatismus als Paradigma",
+      "subtitle": "Wie Forscher KI vorantreiben, ohne sie zu verstehen",
+      "status": "upcoming"
+    },
+    {
+      "date": "2026-04-22",
+      "title": "Regulation is The Antichrist",
+      "subtitle": "Das \"Thiel-Spezial\"",
+      "status": "upcoming"
+    }
+  ]
+}

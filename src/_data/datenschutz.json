@@ -1,0 +1,51 @@
+{
+  "title": "Datenschutzerklärung",
+  "responsible": {
+    "title": "1. Verantwortlicher",
+    "intro": "Verantwortlich für die Datenverarbeitung auf dieser Website ist:",
+    "name": "Adrian Glubrecht",
+    "address": {
+      "street": "Wiesenweg 9a",
+      "postalCode": "51503",
+      "city": "Rösrath"
+    },
+    "email": "bonn@stopaigermany.de"
+  },
+  "general": {
+    "title": "2. Allgemeines zur Datenverarbeitung",
+    "content": "Wir nehmen den Schutz Ihrer personenbezogenen Daten ernst. Diese Website erhebt und verarbeitet Daten ausschließlich im Rahmen der gesetzlichen Bestimmungen.",
+    "noCookies": "Es werden keine Cookies oder Tracking-Tools verwendet."
+  },
+  "hosting": {
+    "title": "3. Hosting und Server-Logfiles",
+    "intro": "Diese Website wird gehostet bei [HOSTER_NAME, ADRESSE].",
+    "dataCollected": "Folgende Daten werden automatisch erfasst:",
+    "logData": [
+      "IP-Adresse",
+      "Datum und Uhrzeit des Zugriffs",
+      "Browsertyp und -version",
+      "Betriebssystem",
+      "Referrer-URL"
+    ],
+    "legalBasis": "Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der technischen Bereitstellung und Sicherheit der Website).",
+    "retention": "Die Logfiles werden automatisch nach 7 Tagen gelöscht."
+  },
+  "rights": {
+    "title": "4. Ihre Rechte",
+    "intro": "Sie haben nach der DSGVO das Recht auf:",
+    "list": [
+      "Auskunft (Art. 15 DSGVO)",
+      "Berichtigung (Art. 16 DSGVO)",
+      "Löschung (Art. 17 DSGVO)",
+      "Einschränkung der Verarbeitung (Art. 18 DSGVO)",
+      "Datenübertragbarkeit (Art. 20 DSGVO)",
+      "Widerspruch (Art. 21 DSGVO)"
+    ],
+    "contact": "Zur Ausübung dieser Rechte wenden Sie sich bitte an die oben genannte Adresse.",
+    "complaint": "Sie haben zudem das Recht, sich bei einer Aufsichtsbehörde (z. B. der LDI NRW) zu beschweren."
+  },
+  "security": {
+    "title": "5. Datensicherheit",
+    "content": "Diese Website nutzt eine SSL-/TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie an der Adresszeile Ihres Browsers (\"https://\")."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "hero": {
+    "title": "Kontrollverlust aufhalten.",
+    "links": [
+      { "label": "KI verstehen.", "href": "#events" },
+      { "label": "Aktiv werden.", "href": "#mitmachen" }
+
+    ]
+  },
+  "about": {
+    "title": "Wer wir sind",
+    "text": "<p>PauseAI Bonn ist die Teil einer internationalen Bewegung, die sich dafür einsetzt die Entwicklung unkontrollierbarer KI-Systeme zu verhindern.</p><p>Die aktuelle Geschwindigkeit der KI-Entwicklung ist gefährlich. Ohne verbindliche internationale Abkommen riskieren wir den Verlust menschlicher Kontrolle über zunehmend mächtige Systeme.</p><p>Unsere Überzeugung: Nur wer die Technologie versteht, kann auch ihre Gefahren einschätzen. Deswegen veranstalten wir wöchentliche Vortragsabende, die sich mit Grundlagen und Risiken von künstlicher Intelligenz befassen.</p>",
+    "learnMoreLabel": "Mehr erfahren",
+    "learnMoreLinks": [
+      { "label": "ki-risiken.de", "url": "https://ki-risiken.de" },
+      { "label": "Superintelligence Statement", "url": "https://superintelligence-statement.org" },
+      { "label": "AI Risk Statement", "url": "https://aistatement.com" }
+    ]
+  },
+  "mitmachen": {
+    "title": "Hilf Mit",
+    "actions": [
+      {
+        "title": "Besuche eine unserer Veranstaltungen",
+        "description": "Ganz gleich ob online oder in Bonn - das ist der einfachste Weg mit uns in Kontakt zu treten und sich mehr mit KI-Risiken auseinanderzusetzen. Keine Vorkenntnisse nötig."
+      },
+      {
+        "title": "Tritt der Community bei",
+        "description": "Auf unserem Discord-Server planen wir Aktionen und tauschen uns deutschland- und weltweit aus."
+      },
+      {
+        "title": "Kontaktier uns",
+        "description": "Du hast eine Idee, wie wir mehr Menschen erreichen können oder was Du beitragen könntest? Schreib uns an!"
+      }
+    ]
+  },
+  "kontakt": {
+    "title": "Kontakt"
+  },
+  "links": {
+    "title": "Weiterführende Links",
+    "resources": [
+      { "label": "PauseAI Deutschland", "url": "https://pause-ai.de" },
+      { "label": "PauseAI Global", "url": "https://pauseai.info" },
+      { "label": "ki-risiken.de — Lernressourcen", "url": "https://ki-risiken.de" },
+      { "label": "Red Lines Initiative", "url": "https://red-lines.ai" },
+      { "label": "Treaty Proposal", "url": "https://ifanyonebuildsit.com/treaty" }
+    ]
+  }
+}

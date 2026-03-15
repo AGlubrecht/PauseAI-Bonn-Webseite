@@ -1,0 +1,110 @@
+---
+layout: layouts/base.njk
+---
+
+{% from "components/event-card.njk" import eventCard %}
+
+{# ===== HERO ===== #}
+<section class="hero" id="hero">
+  <div class="container">
+    <h1 class="hero__title">{{ sections.hero.title }}</h1>
+    <div class="hero__links">
+      {% for link in sections.hero.links %}
+        <a href="{{ link.href }}" class="hero-link">
+          <span>{{ link.label }}</span>
+          <span class="hero-link__arrow">&darr;</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ===== ABOUT ===== #}
+<section class="section" id="about">
+  <div class="container">
+    <h2 class="section__title">{{ sections.about.title }}</h2>
+    <div class="content-block">
+      {{ sections.about.text | safe }}
+    </div>
+  </div>
+</section>
+
+{# ===== EVENTS ===== #}
+<section class="section" id="events">
+  <div class="container">
+    <h2 class="section__title">{{ events.seriesTitle }}</h2>
+    <p class="section__subtitle">{{ events.seriesDescription }}</p>
+    <div class="events-list">
+      {% set foundNext = false %}
+      {% for event in events.events %}
+        {{ eventCard(event, events.time, events.location) }}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ===== MITMACHEN ===== #}
+<section class="section" id="mitmachen">
+  <div class="container">
+    <h2 class="section__title">{{ sections.mitmachen.title }}</h2>
+    {{ sections.mitmachen.text | safe }}
+    <div class="events-list" style="margin-top: var(--spacing-md);">
+      {% for action in sections.mitmachen.actions %}
+        <article class="event-card">
+          <div class="event-card__body">
+            <div class="event-card__title">{{ action.title }}</div>
+            <div class="event-card__subtitle">{{ action.description }}</div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ===== KONTAKT ===== #}
+<section class="section" id="kontakt">
+  <div class="container">
+    <h2 class="section__title">{{ sections.kontakt.title }}</h2>
+    <div class="contact-list">
+      {% if site.contact.email %}
+        <a href="mailto:{{ site.contact.email }}" class="contact-item">
+          <span class="contact-item__icon">&#9993;</span>
+          <div>
+            <div class="contact-item__label">E-Mail</div>
+            <div class="contact-item__value">{{ site.contact.email }}</div>
+          </div>
+        </a>
+      {% endif %}
+      {% if site.contact.discord %}
+        <a href="{{ site.contact.discord }}" class="contact-item" target="_blank" rel="noopener">
+          <span class="contact-item__icon">&#128172;</span>
+          <div>
+            <div class="contact-item__label">Discord</div>
+            <div class="contact-item__value">PauseAI Deutschland Server</div>
+          </div>
+        </a>
+      {% endif %}
+      {% if site.contact.whatsapp %}
+        <a href="{{ site.contact.whatsapp }}" class="contact-item" target="_blank" rel="noopener">
+          <span class="contact-item__icon">&#128241;</span>
+          <div>
+            <div class="contact-item__label">WhatsApp</div>
+            <div class="contact-item__value">WhatsApp-Gruppe beitreten</div>
+          </div>
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{# ===== LINKS ===== #}
+<section class="section" id="links">
+  <div class="container">
+    <h2 class="section__title">{{ sections.links.title }}</h2>
+    <div class="org-links">
+      {% for link in sections.links.resources %}
+        <a href="{{ link.url }}" class="org-link" target="_blank" rel="noopener">{{ link.label }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

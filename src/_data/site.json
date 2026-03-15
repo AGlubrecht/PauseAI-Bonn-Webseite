@@ -1,0 +1,20 @@
+{
+  "title": "PauseAI Bonn",
+  "description": "Lokale Gruppe von PauseAI in Bonn — Wir setzen uns für sichere KI-Entwicklung und internationale Regulierung ein.",
+  "lang": "de",
+  "url": "",
+  "nav": [
+    { "label": "Events", "href": "#events" },
+    { "label": "Links", "href": "#links" },
+    { "label": "Über uns", "href": "#about" }
+  ],
+  "contact": {
+    "email": "bonn@stopaigermany.de",
+    "discord": "https://discord.gg/pvZ5PmRX4R",
+    "whatsapp": ""
+  },
+  "parentOrgs": [
+    { "label": "PauseAI Deutschland", "url": "https://pause-ai.de" },
+    { "label": "PauseAI Global", "url": "https://pauseai.info" }
+  ]
+}

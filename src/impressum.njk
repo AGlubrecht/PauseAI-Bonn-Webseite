@@ -1,0 +1,36 @@
+---
+layout: layouts/base.njk
+title: Impressum — PauseAI Bonn
+---
+
+<section class="section legal-page">
+  <div class="container">
+    <h1>{{ impressum.title }}</h1>
+
+    <h2>{{ impressum.legalInfo.title }}</h2>
+    <p>
+      {{ impressum.legalInfo.name }}<br>
+      {{ impressum.legalInfo.address.street }}<br>
+      {{ impressum.legalInfo.address.postalCode }} {{ impressum.legalInfo.address.city }}<br>
+      {{ impressum.legalInfo.address.country }}
+    </p>
+
+    <h2>{{ impressum.contact.title }}</h2>
+    <p>E-Mail: <a href="mailto:{{ impressum.contact.email }}">{{ impressum.contact.email }}</a></p>
+
+    <h2>{{ impressum.responsibility.title }}</h2>
+    <p>
+      {{ impressum.responsibility.name }}<br>
+      {{ impressum.responsibility.address.street }}<br>
+      {{ impressum.responsibility.address.postalCode }} {{ impressum.responsibility.address.city }}
+    </p>
+
+    <h2>{{ impressum.disclaimer.title }}</h2>
+    <p>{{ impressum.disclaimer.content }}</p>
+    <p>{{ impressum.disclaimer.externalLinks }}</p>
+
+    <h2>{{ impressum.copyright.title }}</h2>
+    <p>{{ impressum.copyright.content }}</p>
+    <p><a href="{{ impressum.copyright.licenseUrl }}" target="_blank" rel="noopener">{{ impressum.copyright.licenseName }}</a></p>
+  </div>
+</section>

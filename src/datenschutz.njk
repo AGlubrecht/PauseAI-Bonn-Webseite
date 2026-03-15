@@ -1,0 +1,47 @@
+---
+layout: layouts/base.njk
+title: Datenschutz — PauseAI Bonn
+---
+
+<section class="section legal-page">
+  <div class="container">
+    <h1>{{ datenschutz.title }}</h1>
+
+    <h2>{{ datenschutz.responsible.title }}</h2>
+    <p>{{ datenschutz.responsible.intro }}</p>
+    <p>
+      {{ datenschutz.responsible.name }}<br>
+      {{ datenschutz.responsible.address.street }}<br>
+      {{ datenschutz.responsible.address.postalCode }} {{ datenschutz.responsible.address.city }}
+    </p>
+    <p>E-Mail: <a href="mailto:{{ datenschutz.responsible.email }}">{{ datenschutz.responsible.email }}</a></p>
+
+    <h2>{{ datenschutz.general.title }}</h2>
+    <p>{{ datenschutz.general.content }}</p>
+    <p>{{ datenschutz.general.noCookies }}</p>
+
+    <h2>{{ datenschutz.hosting.title }}</h2>
+    <p>{{ datenschutz.hosting.intro }}</p>
+    <p>{{ datenschutz.hosting.dataCollected }}</p>
+    <ul>
+      {% for item in datenschutz.hosting.logData %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+    <p>{{ datenschutz.hosting.legalBasis }}</p>
+    <p>{{ datenschutz.hosting.retention }}</p>
+
+    <h2>{{ datenschutz.rights.title }}</h2>
+    <p>{{ datenschutz.rights.intro }}</p>
+    <ul>
+      {% for item in datenschutz.rights.list %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+    <p>{{ datenschutz.rights.contact }}</p>
+    <p>{{ datenschutz.rights.complaint }}</p>
+
+    <h2>{{ datenschutz.security.title }}</h2>
+    <p>{{ datenschutz.security.content }}</p>
+  </div>
+</section>
