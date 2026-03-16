@@ -11,6 +11,7 @@ module.exports = function(eleventyConfig) {
     return `${deWeekdays[date.getDay()]} ${d}. ${deMonths[date.getMonth()]}`;
   });
 
+  eleventyConfig.addPassthroughCopy({"CNAME": "CNAME"});
   eleventyConfig.addPassthroughCopy("src/assets/css");
   eleventyConfig.addPassthroughCopy("src/assets/images");
   eleventyConfig.addPassthroughCopy("src/assets/js");
