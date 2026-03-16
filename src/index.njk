@@ -15,24 +15,26 @@ layout: layouts/base.njk
 <section class="hero" id="hero">
   <div class="container hero__inner">
     {% if nextEvent %}
-    <div class="hero-event">
-      <div class="hero-event__top">
-        <span class="hero-event__live">
-          <span class="hero-event__dot"></span>
-          Nächstes Event
-        </span>
-        <span class="hero-event__countdown" data-event-date="{{ nextEvent.date }}" data-event-time="18:00">
-          --:--:--:--
-        </span>
+    <div class="hero-event-wrapper">
+      <span class="hero-event__label">
+        <span class="hero-event__dot"></span>
+        Nächstes Event
+      </span>
+      <div class="hero-event">
+        <div class="hero-event__top">
+          <span class="hero-event__countdown" data-event-date="{{ nextEvent.date }}" data-event-time="18:00">
+            --:--:--:--
+          </span>
+        </div>
+        <div class="hero-event__meta">
+          {{ nextEvent.date | deDate }} · {{ events.time }}<br>
+          {{ events.location }}
+        </div>
+        <div class="hero-event__title">{{ nextEvent.title }}</div>
+        {% if nextEvent.subtitle %}
+          <div class="hero-event__subtitle">{{ nextEvent.subtitle }}</div>
+        {% endif %}
       </div>
-      <div class="hero-event__meta">
-        {{ nextEvent.date | deDate }} · {{ events.time }}<br>
-        {{ events.location }}
-      </div>
-      <div class="hero-event__title">{{ nextEvent.title }}</div>
-      {% if nextEvent.subtitle %}
-        <div class="hero-event__subtitle">{{ nextEvent.subtitle }}</div>
-      {% endif %}
     </div>
     {% endif %}
 
