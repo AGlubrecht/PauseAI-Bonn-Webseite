@@ -62,6 +62,10 @@ layout: layouts/base.njk
   </div>
 </section>
 
+<script type="application/json" id="events-data">
+{{ events | dump | safe }}
+</script>
+
 {# ===== EVENTS ===== #}
 <section class="section section--events" id="events">
   <div class="container">

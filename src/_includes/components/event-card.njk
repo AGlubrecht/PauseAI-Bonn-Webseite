@@ -10,7 +10,7 @@
   {% set day = parts[2] | int %}
   {% set monthIdx = parts[1] | int - 1 %}
 
-  <article class="event-card{% if event.status == 'past' %} event-card--past{% endif %}{% if event.status == 'tba' %} event-card--tba{% endif %}">
+  <article class="event-card{% if event.status == 'past' %} event-card--past{% endif %}{% if event.status == 'tba' %} event-card--tba{% endif %}" data-event-date="{{ event.date }}">
     <div class="event-card__date">
       <span class="event-card__date-day">{{ day }}</span>
       <span class="event-card__date-month">{{ months[monthIdx] }}</span>
