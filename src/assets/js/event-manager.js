@@ -44,6 +44,19 @@
     }
   }
 
+  // --- Scroll events list so next event is at top ---
+  if (nextEvent) {
+    var nextCard = document.querySelector('.event-card[data-event-date="' + nextEvent.date + '"]');
+    var scrollContainer = document.querySelector('.events-scroll');
+    if (nextCard && scrollContainer) {
+      requestAnimationFrame(function () {
+        var cardTop = nextCard.getBoundingClientRect().top;
+        var containerTop = scrollContainer.getBoundingClientRect().top;
+        scrollContainer.scrollTop = scrollContainer.scrollTop + cardTop - containerTop - 16;
+      });
+    }
+  }
+
   // --- Update hero card ---
   var heroWrapper = document.querySelector('.hero-event-wrapper');
   if (!heroWrapper) return;
