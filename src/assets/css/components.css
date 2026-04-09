@@ -669,6 +669,48 @@
   background-color: var(--color-border);
 }
 
+/* ===== SEASON GROUP ===== */
+
+.events-season-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  border-left: 2px solid var(--season-color, var(--color-primary));
+  padding-left: 10px;
+  padding-top: 1.75rem;
+  position: relative;
+  align-self: center;
+  width: 100%;
+  max-width: min(1000px, 75vw);
+}
+
+.events-season-group::before {
+  content: attr(data-label);
+  position: absolute;
+  top: 0;
+  left: 10px;
+  line-height: 1.75rem;
+  color: var(--season-color, var(--color-primary));
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.events-season-group--spring {
+  --season-color: var(--color-secondary);
+}
+
+.events-season-group--summer {
+  --season-color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .events-season-group {
+    max-width: 100%;
+  }
+}
+
 /* ===== EVENT CARD ===== */
 
 .events-list {

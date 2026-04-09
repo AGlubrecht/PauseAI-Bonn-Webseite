@@ -74,8 +74,14 @@ layout: layouts/base.njk
     <div class="events-shadow-wrap">
       <div class="events-scroll">
         <div class="events-list">
-          {% for event in events.events %}
-            {{ eventCard(event, events.time, events.location) }}
+          {% for season in events.seasons %}
+            <div class="events-season-group events-season-group--{{ season.id }}" data-label="{{ season.label }}">
+              {% for event in events.events %}
+                {% if event.season == season.id %}
+                  {{ eventCard(event, events.time, events.location) }}
+                {% endif %}
+              {% endfor %}
+            </div>
           {% endfor %}
         </div>
       </div>
