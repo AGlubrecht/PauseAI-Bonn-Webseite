@@ -3,6 +3,10 @@
   "seriesDescription": "Wöchentliche Vortragsabende zu KI-Risiken, Grundlagen und Regulierung. Offen für alle Interessierten.",
   "time": "18 Uhr",
   "location": "Adenauerallee 63 (Haupteingang)",
+  "seasons": [
+    { "id": "spring", "label": "Frühling", "from": "2026-02-25", "to": "2026-04-22" },
+    { "id": "summer", "label": "Sommer", "from": "2026-04-29", "to": "2026-07-15" }
+  ],
   "events": [
     {
       "date": "2026-02-25",
@@ -48,14 +52,14 @@
     },
     {
       "date": "2026-04-15",
-      "title": "Analogien und ihre Grenzen III",
-      "subtitle": "Machtorientierte KI-Systeme und Neorealismus",
+      "title": "Regulation is The Antichrist",
+      "subtitle": "Das \"Thiel-Spezial\"",
       "status": "upcoming"
     },
     {
       "date": "2026-04-22",
-      "title": "Regulation is The Antichrist",
-      "subtitle": "Das \"Thiel-Spezial\"",
+      "title": "Analogien und ihre Grenzen III",
+      "subtitle": "Machtorientierte KI-Systeme und Neorealismus",
       "status": "upcoming"
     },
     {

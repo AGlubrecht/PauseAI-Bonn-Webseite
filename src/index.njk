@@ -74,7 +74,6 @@ layout: layouts/base.njk
     <div class="events-shadow-wrap">
       <div class="events-scroll">
         <div class="events-list">
-          {% set foundNext = false %}
           {% for event in events.events %}
             {{ eventCard(event, events.time, events.location) }}
           {% endfor %}
