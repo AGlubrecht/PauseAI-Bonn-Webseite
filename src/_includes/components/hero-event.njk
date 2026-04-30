@@ -1,0 +1,31 @@
+{#
+  Hero "next event" card — shown above the fold on the index page.
+  Expects:
+    event             — { date, title, subtitle }
+    time              — display string (e.g. "18 Uhr")
+    location          — display string
+    defaultEventTime  — "HH:MM" used by the countdown
+#}
+{% macro heroEvent(event, time, location, defaultEventTime) %}
+<div class="hero-event-wrapper">
+  <span class="hero-event__label">
+    <span class="hero-event__dot"></span>
+    Nächstes Event
+  </span>
+  <div class="hero-event">
+    <div class="hero-event__top">
+      <span class="hero-event__countdown" data-event-date="{{ event.date }}" data-event-time="{{ defaultEventTime }}">
+        --:--:--:--
+      </span>
+    </div>
+    <div class="hero-event__meta">
+      {{ event.date | deDate }} · {{ time }}<br>
+      {{ location }}
+    </div>
+    <div class="hero-event__title">{{ event.title }}</div>
+    {% if event.subtitle %}
+      <div class="hero-event__subtitle">{{ event.subtitle }}</div>
+    {% endif %}
+  </div>
+</div>
+{% endmacro %}

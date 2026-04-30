@@ -6,9 +6,9 @@
   var events = data.events;
   var time = data.time;
   var location = data.location;
+  var defaultEventTime = data.defaultEventTime;
 
-  var now = new Date();
-  var todayStr = now.toISOString().slice(0, 10);
+  var todayStr = new Date().toISOString().slice(0, 10);
 
   // Find the first event whose date is today or in the future
   var nextEvent = null;
@@ -16,31 +16,6 @@
     if (events[i].date >= todayStr) {
       nextEvent = events[i];
       break;
-    }
-  }
-
-  // --- Update event card list (derive status from date) ---
-  var cards = document.querySelectorAll('.event-card[data-event-date]');
-  for (var j = 0; j < cards.length; j++) {
-    var card = cards[j];
-    var cardDate = card.getAttribute('data-event-date');
-    var badge = card.querySelector('.event-card__badge');
-    var body = card.querySelector('.event-card__body');
-
-    if (cardDate < todayStr) {
-      // Past: dim it, remove badge
-      card.classList.add('event-card--past');
-      card.classList.remove('event-card--tba');
-      if (badge) badge.remove();
-    } else {
-      // Future: ensure upcoming styling, add badge if missing
-      card.classList.remove('event-card--past');
-      if (!badge && body) {
-        var span = document.createElement('span');
-        span.className = 'event-card__badge event-card__badge--upcoming';
-        span.textContent = 'Coming Up';
-        body.appendChild(span);
-      }
     }
   }
 
@@ -66,19 +41,15 @@
     return;
   }
 
-  var deWeekdays = ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'];
-  var deMonths = ['Januar', 'Februar', 'M\u00e4rz', 'April', 'Mai', 'Juni',
-                  'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
-
+  // Pull the formatted German date from the matching pre-rendered event card
+  // (rendered server-side via the deDate filter). Single source of truth.
   function formatDate(dateStr) {
-    var parts = dateStr.split('-').map(Number);
-    var d = new Date(parts[0], parts[1] - 1, parts[2]);
-    return deWeekdays[d.getDay()] + ' ' + parts[2] + '. ' + deMonths[d.getMonth()];
+    var card = document.querySelector('.event-card[data-event-date="' + dateStr + '"]');
+    return (card && card.getAttribute('data-event-date-de')) || dateStr;
   }
 
   function pad(n) { return n < 10 ? '0' + n : '' + n; }
 
-  // Update hero content
   var titleEl = heroWrapper.querySelector('.hero-event__title');
   var subtitleEl = heroWrapper.querySelector('.hero-event__subtitle');
   var metaEl = heroWrapper.querySelector('.hero-event__meta');
@@ -96,13 +67,13 @@
   }
 
   if (metaEl) {
-    metaEl.innerHTML = formatDate(nextEvent.date) + ' \u00b7 ' + time + '<br>' + location;
+    metaEl.innerHTML = formatDate(nextEvent.date) + ' · ' + time + '<br>' + location;
   }
 
   // Restart countdown with correct target
   if (countdownEl) {
     countdownEl.setAttribute('data-event-date', nextEvent.date);
-    var target = new Date(nextEvent.date + 'T18:00:00').getTime();
+    var target = new Date(nextEvent.date + 'T' + defaultEventTime + ':00').getTime();
 
     function updateCountdown() {
       var diff = target - Date.now();

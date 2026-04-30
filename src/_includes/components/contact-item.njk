@@ -1,0 +1,20 @@
+{#
+  Contact link tile (email / Discord / WhatsApp / etc.).
+  Expects:
+    href     — link target (mailto: or URL)
+    icon     — name from icons.njk
+    label    — small label above the value
+    value    — primary text shown to the user
+    external — true to open in a new tab
+#}
+{% from "components/icons.njk" import icon as renderIcon %}
+
+{% macro contactItem(href, icon, label, value, external=false) %}
+<a href="{{ href }}" class="contact-item"{% if external %} target="_blank" rel="noopener"{% endif %}>
+  <span class="contact-item__icon">{{ renderIcon(icon) }}</span>
+  <div>
+    <div class="contact-item__label">{{ label }}</div>
+    <div class="contact-item__value">{{ value }}</div>
+  </div>
+</a>
+{% endmacro %}

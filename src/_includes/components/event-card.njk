@@ -1,7 +1,7 @@
 {#
   Event card component.
-  Expects `event` variable with: date, title, subtitle, status
-  Expects `events` global with: time, location
+  Expects `event` with: date, title, subtitle  (status derived from date)
+  Expects `time`, `location` from caller (events.time, events.location).
   Date format: "2026-03-18"
 #}
 {% macro eventCard(event, time, location) %}
@@ -9,8 +9,9 @@
   {% set parts = event.date.split("-") %}
   {% set day = parts[2] | int %}
   {% set monthIdx = parts[1] | int - 1 %}
+  {% set status = event.date | eventStatus %}
 
-  <article class="event-card{% if event.status == 'past' %} event-card--past{% endif %}{% if event.status == 'tba' %} event-card--tba{% endif %}" data-event-date="{{ event.date }}">
+  <article class="event-card{% if status == 'past' %} event-card--past{% endif %}{% if status == 'tba' %} event-card--tba{% endif %}" data-event-date="{{ event.date }}" data-event-date-de="{{ event.date | deDate }}">
     <div class="event-card__date">
       <span class="event-card__date-day">{{ day }}</span>
       <span class="event-card__date-month">{{ months[monthIdx] }}</span>
@@ -21,7 +22,7 @@
         <div class="event-card__subtitle">{{ event.subtitle }}</div>
       {% endif %}
       <div class="event-card__meta">{{ time }} · {{ location }}</div>
-      {% if event.status == 'upcoming' %}
+      {% if status == 'upcoming' %}
         <span class="event-card__badge event-card__badge--upcoming">Coming Up</span>
       {% endif %}
     </div>

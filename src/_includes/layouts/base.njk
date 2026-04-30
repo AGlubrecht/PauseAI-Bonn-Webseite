@@ -20,6 +20,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon-16x16.png' | url }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | url }}">
 </head>
+{% from "components/logo.njk" import logo %}
 <body>
   <div class="site">
 
@@ -28,12 +29,7 @@
       <nav class="nav" role="navigation" aria-label="Hauptnavigation">
         <div class="nav__inner">
           <a href="{{ '/' | url }}" class="nav__brand">
-            <div class="logo" role="img" aria-label="PauseAI Bonn Logo">
-              <div class="logo__band"></div>
-              <div class="logo__plaque"></div>
-              <div class="logo__bar logo__bar--left"></div>
-              <div class="logo__bar logo__bar--right"></div>
-            </div>
+            {{ logo() }}
             <span>{{ site.title }}</span>
           </a>
 
@@ -74,7 +70,6 @@
   </div>
 
   <script src="{{ '/assets/js/nav.js' | url }}"></script>
-  <script src="{{ '/assets/js/countdown.js' | url }}"></script>
   <script src="{{ '/assets/js/event-manager.js' | url }}"></script>
 </body>
 </html>

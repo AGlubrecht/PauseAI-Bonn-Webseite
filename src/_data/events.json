@@ -2,157 +2,143 @@
   "seriesTitle": "Veranstaltungen",
   "seriesDescription": "Wöchentliche Vortragsabende zu KI-Risiken, Grundlagen und Regulierung. Offen für alle Interessierten.",
   "time": "18 Uhr",
+  "defaultEventTime": "18:00",
   "location": "Adenauerallee 63 (Haupteingang)",
   "seasons": [
-    { "id": "spring", "label": "Spring Series" },
-    { "id": "summer", "label": "Summer Series" }
+    {
+      "id": "spring",
+      "label": "Spring Series"
+    },
+    {
+      "id": "summer",
+      "label": "Summer Series"
+    }
   ],
   "events": [
     {
       "date": "2026-02-25",
       "title": "Analogien und ihre Grenzen I",
       "subtitle": "Neuronale Netze und das Gehirn",
-      "status": "past",
       "season": "spring"
     },
     {
       "date": "2026-03-04",
       "title": "Blackmail, Täuschung, Kontrollumkehr",
       "subtitle": "Warum sich KI nicht einfach ausschalten lässt",
-      "status": "past",
       "season": "spring"
     },
     {
       "date": "2026-03-11",
       "title": "Analogien und ihre Grenzen II",
       "subtitle": "Maschinelles Lernen und natürliche Selektion",
-      "status": "past",
       "season": "spring"
     },
     {
       "date": "2026-03-18",
       "title": "Hyperscaling",
       "subtitle": "Tempo und Umfang des Rechenzentren-Wettrüstens",
-      "status": "upcoming",
       "season": "spring"
     },
     {
       "date": "2026-03-25",
       "title": "Der EU AI Act",
       "subtitle": "",
-      "status": "upcoming",
       "season": "spring"
     },
     {
       "date": "2026-04-01",
       "title": "Pragmatismus als Paradigma",
       "subtitle": "Wie Forscher KI weiterentwickeln, ohne sie zu verstehen",
-      "status": "upcoming",
       "season": "spring"
     },
     {
       "date": "2026-04-08",
       "title": "Interner Filmabend",
       "subtitle": "",
-      "status": "upcoming",
       "season": "spring"
     },
     {
       "date": "2026-04-15",
       "title": "Regulation is The Antichrist",
       "subtitle": "Das \"Thiel-Spezial\"",
-      "status": "upcoming",
       "season": "spring"
     },
     {
       "date": "2026-04-22",
       "title": "Analogien und ihre Grenzen III",
       "subtitle": "Machtorientierte KI-Systeme und Neorealismus",
-      "status": "upcoming",
       "season": "spring"
     },
     {
       "date": "2026-04-29",
       "title": "Grundlagen der KI",
       "subtitle": "Neuronale Netzwerke einfach erklärt",
-      "status": "upcoming",
       "season": "summer"
     },
     {
       "date": "2026-05-06",
       "title": "Ist dein Job sicher vor KI?",
       "subtitle": "Statistik und Prognosen",
-      "status": "upcoming",
       "season": "summer"
     },
     {
       "date": "2026-05-13",
       "title": "Wie funktionieren ChatGPT und co?",
       "subtitle": "Vom neuronalen Netzwerk zum Assistenten",
-      "status": "upcoming",
       "season": "summer"
     },
     {
       "date": "2026-05-20",
       "title": "KI-Industrie",
       "subtitle": "Zwischen exponentiellem Wachstum und physikalischen Limits",
-      "status": "upcoming",
       "season": "summer"
     },
     {
       "date": "2026-05-27",
       "title": "Deepfakes, Slop, Massenüberwachung",
       "subtitle": "Systematischer Blick auf KI-Risiken",
-      "status": "upcoming",
       "season": "summer"
     },
     {
       "date": "2026-06-03",
       "title": "Maschineller Selbsterhaltungstrieb",
       "subtitle": "Mechanismen und Beispiele",
-      "status": "upcoming",
       "season": "summer"
     },
     {
       "date": "2026-06-10",
       "title": "Vollautonome Waffensysteme",
       "subtitle": "Der neue Start-Up-Sektor",
-      "status": "upcoming",
       "season": "summer"
     },
     {
       "date": "2026-06-17",
       "title": "KI-Regulierung weltweit",
       "subtitle": "",
-      "status": "upcoming",
       "season": "summer"
     },
     {
       "date": "2026-06-24",
       "title": "\"Lights out for all of us\"",
       "subtitle": "Droht uns die Entstehung unkontrollierbarer Systeme?",
-      "status": "upcoming",
       "season": "summer"
     },
     {
       "date": "2026-07-01",
       "title": "Rote Linien",
       "subtitle": "Entwurf eines internationalen Abkommens",
-      "status": "upcoming",
       "season": "summer"
     },
     {
       "date": "2026-07-08",
       "title": "Nicht mit Uns!",
       "subtitle": "Wirksame Werkzeuge demokratischer Einflussnahme",
-      "status": "upcoming",
       "season": "summer"
     },
     {
       "date": "2026-07-15",
       "title": "Wie KI-Entwicklung sich selbst beschleunigt",
       "subtitle": "Von AlphaEvolve zur Singularität",
-      "status": "upcoming",
       "season": "summer"
     }
   ]

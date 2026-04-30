@@ -11,6 +11,14 @@ module.exports = function(eleventyConfig) {
     return `${deWeekdays[date.getDay()]} ${d}. ${deMonths[date.getMonth()]}`;
   });
 
+  // Derive event status from date — single source of truth.
+  // Returns "past" | "upcoming" | "tba" (no/empty date).
+  eleventyConfig.addFilter("eventStatus", function(dateStr) {
+    if (!dateStr) return "tba";
+    const today = new Date().toISOString().slice(0, 10);
+    return dateStr < today ? "past" : "upcoming";
+  });
+
   eleventyConfig.addPassthroughCopy({"CNAME": "CNAME"});
   eleventyConfig.addPassthroughCopy("src/assets/css");
   eleventyConfig.addPassthroughCopy("src/assets/images");

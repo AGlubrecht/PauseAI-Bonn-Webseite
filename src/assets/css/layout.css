@@ -39,7 +39,7 @@ body {
   max-width: var(--container-max);
   margin: 0;
   padding: 0 var(--spacing-md);
-  padding-left: calc(42px + 2 * 0.625rem);
+  padding-left: var(--nav-edge-pad);
   width: 100%;
 }
 

@@ -8,12 +8,28 @@
     { "label": "Links", "href": "#links" },
     { "label": "Über uns", "href": "#about" }
   ],
-  "contact": {
-    "email": "bonn@stopaigermany.de",
-    "discord": "https://discord.gg/pvZ5PmRX4R",
-    "discordInternational": "https://discord.gg/2XXWXvErfA",
-    "whatsapp": ""
-  },
+  "contact": [
+    {
+      "icon": "email",
+      "label": "E-Mail",
+      "value": "bonn@stopaigermany.de",
+      "href": "mailto:bonn@stopaigermany.de"
+    },
+    {
+      "icon": "discord",
+      "label": "Discord",
+      "value": "PauseAI Deutschland Server",
+      "href": "https://discord.gg/pvZ5PmRX4R",
+      "external": true
+    },
+    {
+      "icon": "globe",
+      "label": "Discord (International)",
+      "value": "PauseAI Global Server",
+      "href": "https://discord.gg/2XXWXvErfA",
+      "external": true
+    }
+  ],
   "parentOrgs": [
     { "label": "PauseAI Deutschland", "url": "https://pause-ai.de" },
     { "label": "PauseAI Global", "url": "https://pauseai.info" }
