@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <rect width="800" height="800" fill="#000"/>
+  <defs>
+    <!-- Clip region: everything above the top edge of the band -->
+    <clipPath id="above-band">
+      <rect x="-600" y="-2000" width="2000" height="2450" transform="rotate(-11.309932, 400, 400)"/>
+    </clipPath>
+  </defs>
+
+  <!-- Green sun: half visible, shifted left along the line -->
+  <circle cx="300" cy="445" r="100" fill="#3ab54a" clip-path="url(#above-band)"/>
+
+  <!-- White band: thin (25px), gap of 30px below clip -->
+  <rect x="-600" y="480" width="2000" height="25" fill="#ffffff" transform="rotate(-11.309932, 400, 400)"/>
+</svg>

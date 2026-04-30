@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sunrise Variations</title>
+  <style>
+    body { background: #111; color: #aaa; font-family: monospace; margin: 0; padding: 24px; }
+    h1 { color: #fff; font-size: 14px; letter-spacing: 0.1em; margin-bottom: 24px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 960px; }
+    .cell { display: flex; flex-direction: column; gap: 8px; }
+    .cell svg { width: 100%; aspect-ratio: 1; display: block; }
+    .label { font-size: 11px; color: #666; }
+    .label strong { color: #999; }
+  </style>
+</head>
+<body>
+<h1>SUNRISE — VARIATIONS (slightly less than half visible)</h1>
+<div class="grid">
+
+  <!-- V1: just under half -->
+  <div class="cell">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+      <rect width="800" height="800" fill="#000"/>
+      <defs><clipPath id="c1">
+        <rect x="-600" y="-2000" width="2000" height="2450" transform="rotate(-11.309932,400,400)"/>
+      </clipPath></defs>
+      <circle cx="300" cy="458" r="100" fill="#3ab54a" clip-path="url(#c1)"/>
+      <rect x="-600" y="480" width="2000" height="25" fill="#fff" transform="rotate(-11.309932,400,400)"/>
+    </svg>
+    <div class="label"><strong>V1</strong> — cy 458 · just under half</div>
+  </div>
+
+  <!-- V2: ~40% visible -->
+  <div class="cell">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+      <rect width="800" height="800" fill="#000"/>
+      <defs><clipPath id="c2">
+        <rect x="-600" y="-2000" width="2000" height="2450" transform="rotate(-11.309932,400,400)"/>
+      </clipPath></defs>
+      <circle cx="300" cy="465" r="100" fill="#3ab54a" clip-path="url(#c2)"/>
+      <rect x="-600" y="480" width="2000" height="25" fill="#fff" transform="rotate(-11.309932,400,400)"/>
+    </svg>
+    <div class="label"><strong>V2</strong> — cy 465 · ~40% visible</div>
+  </div>
+
+  <!-- V3: ~35% visible -->
+  <div class="cell">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+      <rect width="800" height="800" fill="#000"/>
+      <defs><clipPath id="c3">
+        <rect x="-600" y="-2000" width="2000" height="2450" transform="rotate(-11.309932,400,400)"/>
+      </clipPath></defs>
+      <circle cx="300" cy="472" r="100" fill="#3ab54a" clip-path="url(#c3)"/>
+      <rect x="-600" y="480" width="2000" height="25" fill="#fff" transform="rotate(-11.309932,400,400)"/>
+    </svg>
+    <div class="label"><strong>V3</strong> — cy 472 · ~35% visible</div>
+  </div>
+
+  <!-- V4: ~40%, shifted further left -->
+  <div class="cell">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+      <rect width="800" height="800" fill="#000"/>
+      <defs><clipPath id="c4">
+        <rect x="-600" y="-2000" width="2000" height="2450" transform="rotate(-11.309932,400,400)"/>
+      </clipPath></defs>
+      <circle cx="275" cy="463" r="100" fill="#3ab54a" clip-path="url(#c4)"/>
+      <rect x="-600" y="480" width="2000" height="25" fill="#fff" transform="rotate(-11.309932,400,400)"/>
+    </svg>
+    <div class="label"><strong>V4</strong> — cx 275 cy 463 · further left</div>
+  </div>
+
+  <!-- V5: ~40%, wider gap, hairline band -->
+  <div class="cell">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+      <rect width="800" height="800" fill="#000"/>
+      <defs><clipPath id="c5">
+        <rect x="-600" y="-2000" width="2000" height="2450" transform="rotate(-11.309932,400,400)"/>
+      </clipPath></defs>
+      <circle cx="300" cy="463" r="100" fill="#3ab54a" clip-path="url(#c5)"/>
+      <rect x="-600" y="490" width="2000" height="16" fill="#fff" transform="rotate(-11.309932,400,400)"/>
+    </svg>
+    <div class="label"><strong>V5</strong> — cy 463 · gap 40 · band 16</div>
+  </div>
+
+  <!-- V6: ~40%, slightly larger circle -->
+  <div class="cell">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+      <rect width="800" height="800" fill="#000"/>
+      <defs><clipPath id="c6">
+        <rect x="-600" y="-2000" width="2000" height="2450" transform="rotate(-11.309932,400,400)"/>
+      </clipPath></defs>
+      <circle cx="300" cy="470" r="115" fill="#3ab54a" clip-path="url(#c6)"/>
+      <rect x="-600" y="480" width="2000" height="25" fill="#fff" transform="rotate(-11.309932,400,400)"/>
+    </svg>
+    <div class="label"><strong>V6</strong> — r 115 · cy 470 · same gap/band</div>
+  </div>
+
+</div>
+</body>
+</html>
