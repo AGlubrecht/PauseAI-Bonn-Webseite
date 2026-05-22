@@ -42,6 +42,7 @@
     "resources": [
       { "label": "PauseAI Deutschland", "url": "https://pause-ai.de" },
       { "label": "PauseAI Global", "url": "https://pauseai.info" },
+      { "label": "AI Safety Bonn", "url": "https://aisafetybonn.org/" },
       { "label": "ki-risiken.de — Lernressourcen", "url": "https://ki-risiken.de" },
       { "label": "Red Lines Initiative", "url": "https://red-lines.ai" },
       { "label": "Treaty Proposal", "url": "https://ifanyonebuildsit.com/treaty" }
