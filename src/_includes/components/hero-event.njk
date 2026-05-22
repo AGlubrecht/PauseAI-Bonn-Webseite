@@ -14,13 +14,13 @@
   </span>
   <div class="hero-event">
     <div class="hero-event__top">
-      <span class="hero-event__countdown" data-event-date="{{ event.date }}" data-event-time="{{ defaultEventTime }}">
+      <span class="hero-event__countdown" data-event-date="{{ event.date }}" data-event-time="{{ event.eventTime or defaultEventTime }}">
         --:--:--:--
       </span>
     </div>
     <div class="hero-event__meta">
-      {{ event.date | deDate }} · {{ time }}<br>
-      {{ location }}
+      {{ event.date | deDate }} · {{ event.time or time }}<br>
+      {{ event.location or location }}
     </div>
     <div class="hero-event__title">{{ event.title }}</div>
     {% if event.subtitle %}

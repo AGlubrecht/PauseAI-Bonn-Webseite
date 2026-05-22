@@ -97,13 +97,19 @@
       "date": "2026-05-27",
       "title": "Deepfakes, Slop, Massenüberwachung",
       "subtitle": "Systematischer Blick auf KI-Risiken",
-      "season": "summer"
+      "season": "summer",
+      "time": "18:30 Uhr",
+      "eventTime": "18:30",
+      "location": "Evangelischer Kirchenpavillon, Kaiserplatz 1a"
     },
     {
       "date": "2026-06-03",
       "title": "Maschineller Selbsterhaltungstrieb",
       "subtitle": "Mechanismen und Beispiele",
-      "season": "summer"
+      "season": "summer",
+      "time": "18:30 Uhr",
+      "eventTime": "18:30",
+      "location": "Evangelischer Kirchenpavillon, Kaiserplatz 1a"
     },
     {
       "date": "2026-06-10",
@@ -115,7 +121,10 @@
       "date": "2026-06-17",
       "title": "KI-Regulierung weltweit",
       "subtitle": "",
-      "season": "summer"
+      "season": "summer",
+      "time": "18:30 Uhr",
+      "eventTime": "18:30",
+      "location": "Evangelischer Kirchenpavillon, Kaiserplatz 1a"
     },
     {
       "date": "2026-06-24",
@@ -139,7 +148,10 @@
       "date": "2026-07-15",
       "title": "Wie KI-Entwicklung sich selbst beschleunigt",
       "subtitle": "Von AlphaEvolve zur Singularität",
-      "season": "summer"
+      "season": "summer",
+      "time": "18:30 Uhr",
+      "eventTime": "18:30",
+      "location": "Evangelischer Kirchenpavillon, Kaiserplatz 1a"
     }
   ]
 }

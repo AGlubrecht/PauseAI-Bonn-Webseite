@@ -66,14 +66,19 @@
     }
   }
 
+  var eventTime = nextEvent.time || time;
+  var eventLocation = nextEvent.location || location;
+  var eventCountdownTime = nextEvent.eventTime || defaultEventTime;
+
   if (metaEl) {
-    metaEl.innerHTML = formatDate(nextEvent.date) + ' · ' + time + '<br>' + location;
+    metaEl.innerHTML = formatDate(nextEvent.date) + ' · ' + eventTime + '<br>' + eventLocation;
   }
 
   // Restart countdown with correct target
   if (countdownEl) {
     countdownEl.setAttribute('data-event-date', nextEvent.date);
-    var target = new Date(nextEvent.date + 'T' + defaultEventTime + ':00').getTime();
+    countdownEl.setAttribute('data-event-time', eventCountdownTime);
+    var target = new Date(nextEvent.date + 'T' + eventCountdownTime + ':00').getTime();
 
     function updateCountdown() {
       var diff = target - Date.now();
