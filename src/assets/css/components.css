@@ -705,6 +705,10 @@
   --season-color: var(--color-primary);
 }
 
+.events-season-group--stammtisch {
+  --season-color: var(--color-tertiary);
+}
+
 @media (max-width: 768px) {
   .events-season-group {
     max-width: 100%;

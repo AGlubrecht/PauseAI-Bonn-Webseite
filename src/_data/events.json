@@ -12,6 +12,10 @@
     {
       "id": "summer",
       "label": "Summer Series"
+    },
+    {
+      "id": "stammtisch",
+      "label": "Sommer-Stammtisch"
     }
   ],
   "events": [
@@ -152,6 +156,34 @@
       "time": "18:30 Uhr",
       "eventTime": "18:30",
       "location": "Evangelischer Kirchenpavillon, Kaiserplatz 1a"
+    },
+    {
+      "date": "2026-08-05",
+      "title": "Sommer-Stammtisch",
+      "subtitle": "KI-Ausbruch bei Anthropic und OpenAI",
+      "season": "stammtisch",
+      "location": "Zartbitter Café, Argelanderstraße 24"
+    },
+    {
+      "date": "2026-08-19",
+      "title": "Sommer-Stammtisch",
+      "subtitle": "GPT-6 und KI in der Mathematik",
+      "season": "stammtisch",
+      "location": "Zartbitter Café, Argelanderstraße 24"
+    },
+    {
+      "date": "2026-09-02",
+      "title": "Sommer-Stammtisch",
+      "subtitle": "Trump und Xi & Strategiebesprechung",
+      "season": "stammtisch",
+      "location": "Zartbitter Café, Argelanderstraße 24"
+    },
+    {
+      "date": "2026-09-16",
+      "title": "Sommer-Stammtisch",
+      "subtitle": "Planung Wintersemester",
+      "season": "stammtisch",
+      "location": "Zartbitter Café, Argelanderstraße 24"
     }
   ]
 }
